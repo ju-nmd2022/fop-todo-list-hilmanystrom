@@ -15,3 +15,21 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
+.workout {
+  background-color: beige;
+  padding: 4rem;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  height: 16rem;
+}
+
+.finished {
+  background-color: lightcoral;
+  padding: 4rem;
+}
+
+.categories {
+  font-size: 2em;
+  text-align: center;
+}
