@@ -21,4 +21,19 @@ function addToFinishedWorkouts() {
   doneElement.appendChild(spanElement);
   // doneElement.innerText = this.innerText;
   finishedWorkoutsElement.appendChild(doneElement);
+
+  const button = document.createElement("button");
+  button.innerText = "Move Back";
+  button.onclick = moveBackElement;
+  doneElement.appendChild(button);
 }
+
+function moveBackElement() {
+  const element = this.parentNode;
+  console.log(element);
+
+  element.parentNode.removeChild(element);
+}
+
+
+localStorage.
