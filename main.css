@@ -1,0 +1,51 @@
+* {
+  font-family: sans-serif;
+  background-color: skyblue;
+}
+
+.header {
+  display: flex;
+  font-size: 2cm;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.workout,
+#workout {
+  background-color: lightcoral;
+  padding: 4rem;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  height: 36rem;
+}
+
+.finished {
+  background-color: rgb(206, 255, 163);
+  padding: 4rem;
+  font-size: larger;
+}
+
+.categories {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1cm;
+}
+
+#newTaskInput {
+  color: coral;
+  background-color: antiquewhite;
+}
+
+#addTaskButton {
+  background-color: rgb(237, 100, 173);
+  height: 10rem;
+}
