@@ -34,6 +34,21 @@ function addToFinishedWorkouts() {
   }
 }
 
+const addTaskButton = document.getElementById("addTaskButton");
+const newTaskInput = document.getElementById("newTaskInput");
+
+addTaskButton.addEventListener("click", function () {
+  const workoutName = newTaskInput.value;
+  if (workoutName) {
+    const workoutElement = document.createElement("div");
+    workoutElement.innerText = workoutName;
+    workoutElement.classList.add("categories");
+    workoutElement.onclick = addToFinishedWorkouts;
+    workoutList.appendChild(workoutElement);
+    newTaskInput.value = "";
+  }
+});
+
 function createFinishedWorkoutElement(workout) {
   const doneElement = document.createElement("div");
   const spanElement = document.createElement("span");
@@ -59,3 +74,9 @@ function moveBackElement() {
 
   element.parentNode.removeChild(element);
 }
+
+const storedWorkouts = localStorage.getItem("workouts")
+  ? localStorage.getItem("workouts").split(",")
+  : [];
+storedWorkouts.push(workoutName);
+localStorage.setItem("workouts", storedWorkouts.join(","));

@@ -39,3 +39,13 @@
 h2 {
   font-size: 1cm;
 }
+
+#newTaskInput {
+  color: coral;
+  background-color: antiquewhite;
+}
+
+#addTaskButton {
+  background-color: rgb(237, 100, 173);
+  height: 10rem;
+}
